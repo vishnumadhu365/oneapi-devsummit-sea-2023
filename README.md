@@ -15,19 +15,30 @@ Note: For the below command, replace 'user' with your actual username <br>
    ```
    ssh username@idcbetabatch.eglb.intel.com
    ```
-   <mark>include success screenshot</mark>
+   ==include success screenshot==
 2. Request for compute node <br>
    ```
    srun -p pvc-shared --pty /bin/bash
    ```
+   ==include success screenshot==
 3. Clone this repository <br>
    ```
    git clone https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023.git
    ```
+   ==include success screenshot==
 4. Prepare environment
    ```
    source prepare_env.sh
    ```
+   ==include success screenshot==
+5. Note down ip-address and port-number of jupyter server<br>
+   ==include success screenshot==
+6. In a new terminal create an ssh tunnel to the jupyter server<br>
+    ```
+   ssh -L port-number:ip-address:portnumber username@idcbetabatch.eglb.intel.com
+   ```
+   sample ssh command --> ssh -L 8888:10.0.0.8:8888 u107456<span>@</span>idcbetabatch.eglb.intel.com
+7. Open browser on laptop and hit localhost:port-number
 
 ## Help improve IDC
 
