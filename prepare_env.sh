@@ -31,27 +31,30 @@ alias activate_oneapi="source /opt/intel/oneapi/setvars.sh"
 #alias need_help "slurm commands srun squeue sinfo"
 
 
-#<<comment-out
+# Create ITEX Env CPU
+ENV_NAME=itex_cpu
+deactivate
+rm -rf $ENV_NAME
+python -m venv $ENV_NAME
+source $ENV_NAME/bin/activate
+pip install --upgrade pip
+pip install scikit-image jupyter matplotlib intel-extension-for-tensorflow[cpu]==2.13.0.0 keras_cv keras_core ipykernel 
+jupyter kernelspec uninstall $ENV_NAME -y
+python -m ipykernel install --user --name=$ENV_NAME
+deactivate
 
-# Create ITEX Env
+
+# Create ITEX Env GPU
 ENV_NAME=itex_xpu
 deactivate
 rm -rf $ENV_NAME
 python -m venv $ENV_NAME
 source $ENV_NAME/bin/activate
 pip install --upgrade pip
-pip install scikit-image jupyter matplotlib #tensorflow==2.12.0
-pip install --upgrade intel-extension-for-tensorflow[xpu] -f https://developer.intel.com/itex-whl-weekly
-pip install intel-extension-for-tensorflow-lib
+pip install scikit-image jupyter matplotlib intel-extension-for-tensorflow[xpu]==2.13.0.0 keras_cv keras_core ipykernel
+jupyter kernelspec uninstall $ENV_NAME -y
+python -m ipykernel install --user --name=$ENV_NAME
 
-# Patch Keras-cv Stable Diffusion with Intel optimizations
-rm -rf keras-cv
-git clone https://github.com/keras-team/keras-cv.git
-cd keras-cv
-git reset --hard 66fa74b6a2a0bb1e563ae8bce66496b118b95200
-git apply ../patch
-pip install .
-cd ..
 
 #comment-out
 
