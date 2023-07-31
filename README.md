@@ -31,7 +31,7 @@ Note: For the below command, replace 'user' with your actual username <br>
    source prepare_env.sh
    ```
    ==include success screenshot==
-5. Note down ip-address and port-number of jupyter server<br>. Copy the url starting with localhost:xxxx
+5. Note down ip-address and port-number of jupyter server. Copy the url starting with localhost:xxxx <br>
    ==include success screenshot==
 6. In a new terminal create an ssh tunnel to the jupyter server<br>
     ```
