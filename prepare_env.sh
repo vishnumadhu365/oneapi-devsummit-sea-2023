@@ -51,7 +51,8 @@ rm -rf $ENV_NAME
 python -m venv $ENV_NAME
 source $ENV_NAME/bin/activate
 pip install --upgrade pip
-pip install scikit-image jupyter matplotlib intel-extension-for-tensorflow[xpu]==2.13.0.0 keras_cv keras_core ipykernel rettytable
+pip install scikit-image jupyter matplotlib intel-extension-for-tensorflow[xpu]==2.13.0.0 keras_cv keras_core ipykernel prettytable
+pip install ipykernel
 jupyter kernelspec uninstall $ENV_NAME -y
 python -m ipykernel install --user --name=$ENV_NAME
 
