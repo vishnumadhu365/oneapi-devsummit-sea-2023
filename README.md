@@ -31,15 +31,22 @@ Note: For the below command, replace 'user' with your actual username <br>
    source prepare_env.sh
    ```
    ==include success screenshot==
-5. Note down ip-address and port-number of jupyter server<br>
+5. Note down ip-address and port-number of jupyter server<br>. Copy the url starting with localhost:xxxx
    ==include success screenshot==
 6. In a new terminal create an ssh tunnel to the jupyter server<br>
     ```
    ssh -L port-number:ip-address:portnumber username@idcbetabatch.eglb.intel.com
    ```
    sample ssh command --> ssh -L 8888:10.0.0.8:8888 u107456<span>@</span>idcbetabatch.eglb.intel.com
-7. Open browser on laptop and hit localhost:port-number
+7. Open browser on laptop and hit the url copied earlier (starting with localhost:xxxx)
 
 ## Help improve IDC
 
 ## Common issues
+1. I was running the ipynb notebook, then the terminal exited abrupty. How do I resume my work ?
+<include answer>
+2. GPU Notebook has been running for more than 10 mins, seems its stuck, what to do ?
+<issue with multiple sessions on same gpu, restart kernel and try if there are other less utilized gpus to run the notebook>
+3. Facing random errors ?
+<restart kernel>
+4. 
