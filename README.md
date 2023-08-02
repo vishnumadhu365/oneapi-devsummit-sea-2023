@@ -1,12 +1,12 @@
 <p align="center"><img width="749"  src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/cfd8c105-3ebf-4614-82e4-5fcbd130dc2f"></p>
 
 ## Welcome
-Thank you for choosing to attend the AI Workshop @ oneAPI Devsummit 2023. This github repository holds the necessary artifacts for conducting the handson AI workshop.
+Thank you for choosing to attend the AI Workshop @ oneAPI Devsummit 2023. This github repository holds the necessary artifacts for participating in the handson AI workshop.
 
 ## Objectives
-1. Get the hands-on experience on the new [Intel® Developer Cloud (Beta)](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html)
-2. Explore the optimizations delivered through the [Intel Extension for Tensorflow*](https://github.com/intel/intel-extension-for-tensorflow)
-3. Understand the specifics of effectively utilizing the following Intel® hardware for AI workloads, (1) the [4th Generation Intel® Xeon® Scalable Processor](https://ark.intel.com/content/www/us/en/ark/products/231746/intel-xeon-platinum-8480-processor-105m-cache-2-00-ghz.html) (codenamed Sapphire Rapids) and (2) the [Intel® Data Center GPU Max 1100](https://www.intel.com/content/www/us/en/products/sku/232876/intel-data-center-gpu-max-1100/specifications.html) (codenamed Ponte Vecchio)
+1. Get the hands-on experience on the new [Intel® Developer Cloud (Beta)](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).
+2. Explore the optimizations delivered through the [Intel Extension for Tensorflow* (ITEX)](https://github.com/intel/intel-extension-for-tensorflow), [docs](https://intel.github.io/intel-extension-for-tensorflow/latest/get_started.html).
+3. Understand the specifics of effectively utilizing the following Intel® hardware for AI workloads, (1) the [4th Generation Intel® Xeon® Scalable Processor](https://ark.intel.com/content/www/us/en/ark/products/231746/intel-xeon-platinum-8480-processor-105m-cache-2-00-ghz.html) (codenamed Sapphire Rapids) and (2) the [Intel® Data Center GPU Max 1100](https://www.intel.com/content/www/us/en/products/sku/232876/intel-data-center-gpu-max-1100/specifications.html) (codenamed Ponte Vecchio).
 
 ## Pre-requisites
 1. *You have registered and can login to the [Intel® Developer Cloud (IDC)](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).* <br>
@@ -16,8 +16,7 @@ Most Linux/MacOS distros comes pre-installed with an ssh client.<br> If you are 
 3.  *You have access to the [oneAPI Discord](https://discord.gg/ycwqTP6) channel.*<br> This discord channel can help resolve your queries during and after the workshop.
 
 ## Getting started with IDC 
-<details><summary>Note : Have you already ssh'ed on to the head node? If so, you can skip this section.</summary> <img width="578" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/5899afbf-6d4a-42c0-a1e4-ede3ff330fb8">
-</details>
+<details><summary>Note : Have you already ssh'ed on to the head node? If so, you can skip this section.</summary> <img width="578" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/5899afbf-6d4a-42c0-a1e4-ede3ff330fb8"></details>
 
 Once registered on IDC, perform the following steps to access the IDC "Scheduled access" nodes. <br>
 1. <details><summary>Sign-in to https://cloud.intel.com .</summary> <img width="841" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/2fcf7189-d3dc-4526-b004-175e212e3ea1"></details>
@@ -31,11 +30,11 @@ Note: The above steps assumes that your laptop is connected to an open Internet 
 ## Getting started on AI workshop **wip**
 <clone repo, run prepare_env.sh, note jupyter ip:port, open tunnel, access in local browser, rest of the instructions are on the ipynb notebook>
 1. SSH into idc head node. <br>
-Note: For the below command, replace 'user' with your actual username <br>
+Note: For the below command, replace 'username' with your actual username <br>
    ```
    ssh username@idcbetabatch.eglb.intel.com
    ```
-   ==include success screenshot==
+   <details><summary>--> info</summary><img width="709" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ee7d737a-d73d-422b-8803-2c4fab81382b"></details>
 2. Request for compute node <br>
    ```
    srun -p pvc-shared --pty /bin/bash
@@ -60,6 +59,7 @@ Note: For the below command, replace 'user' with your actual username <br>
    ```
    sample ssh command --> ssh -L 8888:10.0.0.8:8888 u107456<span>@</span>idcbetabatch.eglb.intel.com
 7. Open browser on laptop and hit the url copied earlier (starting with localhost:xxxx)
+8. 
 
 ## Help improve IDC **wip**
 
