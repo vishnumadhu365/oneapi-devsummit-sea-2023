@@ -24,23 +24,28 @@ Once registered on IDC, perform the following steps to access the IDC "Scheduled
 3. <details><summary>Visit 'View Instances' tab and ensure that there are no running instances.</summary> <img width="427" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/c5f69849-865a-4a44-a97b-30e5302ed139"></details>
 4. <details><summary>Go to 'Launch Instance' tab and launch the 'Schedule Access' instance (it's the first option in the list).</summary><img width="848" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ebcc0beb-6b46-4be2-8d07-181e220689f1"></details>
 5. <details><summary>Go to 'View Instances' tab and check if the instance you created is getting listed there.</summary><img width="648" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/9d672f2c-1d81-45a9-8a0a-9b77cad0b7a3"></details>
-6. <details>
-   <summary>Create an SSH config file.</summary>
-   Create a file named 'config' at the path home. Copy the below contents and edit to suit your details.
+6. &nbsp;<details><summary>Create an SSH config file.</summary>
+   Create a file named 'config' at the path $HOME/.ssh/config. Copy the below contents and change username.
    ```
-   test code
+   Host myidc
+   Hostname idcbetabatch.eglb.intel.com
+   User uXXXXXX ## Change this to reflect your username obtained in step 4
+   ServerAliveInterval 60
+   ServerAliveCountMax 10
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
    ```
-</details>
+   <img width="542" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/23e9f216-9a58-4659-914c-3fd21fe3b7d8"></details>
+7. <details><summary>Open command prompt and try logging in as 'ssh myidc'</summary><img width="448" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/c05228df-70dd-4e08-81ff-326819fed11f"></details>
 Note: The above steps assumes that your laptop is connected to an open Internet and it is **NOT** behind a corporate VPN/proxy. Additional steps as highlighted in this [guide](https://github.com/bjodom/idc#ssh-config-client-setup-assumes-no-proxy-needed) might be needed to get it working behind a proxy.
 
-## Getting started on AI workshop **wip**
+## Getting started on AI workshop 
 <clone repo, run prepare_env.sh, note jupyter ip:port, open tunnel, access in local browser, rest of the instructions are on the ipynb notebook>
 1. SSH into idc head node. <br>
-Note: For the below command, replace 'username' with your actual username <br>
    ```
-   ssh username@idcbetabatch.eglb.intel.com
+   ssh myidc
    ```
-   <details><summary>--> info</summary><img width="709" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ee7d737a-d73d-422b-8803-2c4fab81382b"></details>
+   <details><summary>--> info</summary><img width="395" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/18b69a2b-766c-488d-be0d-c0fb74d867d2"></details>
 2. Request for compute node. <br>
    ```
    srun -p pvc-shared --pty /bin/bash
@@ -55,24 +60,30 @@ Note: For the below command, replace 'username' with your actual username <br>
    
 
 4. Prepare environment.<br>
-Note : Below step could take 15 ~ 20 mins to complete.
+Note : Below step could take 15 ~ 20 mins to complete. This step has to be executed only once.
    ```
    source prepare_env.sh
    ```
-   ==include success screenshot==
-5. Note down ip-address and port-number of jupyter server. Copy the url starting with localhost:xxxx <br>
-   ==include success screenshot==
+   <details><summary>--> info</summary>If everything goes well, you should see the jupyter logs as in below image. You should see 2 links as marked in the red box<img width="708" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/f71c448b-8e23-47a0-9877-ec48ef07a677"></details>
+5. Note down ip-address (starting 10.10.10.x) and port-number(starting 88xx)of the jupyter server.<br> Copy the url starting with 127.0.0.1:88xx <br>
+   <details><summary>--> info</summary>Note down the following (1) ipaddress starting 10.10.10.x (2) port number starting 88xx (3) copy to a notepad the link starting 127.0.0.1:88xx/tree?token=........<img width="678" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/34b640c0-80d4-4a3d-be3b-cacc80af61f8"></details>
 6. In a new terminal create an ssh tunnel to the jupyter server<br>
     ```
-   ssh -L port-number:ip-address:portnumber username@idcbetabatch.eglb.intel.com
+   ssh -L port-number:ip-address:portnumber myidc
    ```
-   sample ssh command --> ssh -L 8888:10.0.0.8:8888 u107456<span>@</span>idcbetabatch.eglb.intel.com
-7. Open browser on laptop and hit the url copied earlier (starting with localhost:xxxx)
-8. 
+    <details><summary>--> info</summary>sample ssh command --> ssh -L 88xx:10.0.0.x:88xx myidc <br> include the ip-address and port number from step:5<br><img width="599" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/32f00797-ae14-4936-ba3e-87ecbdc4e183"></details>
+7. Open browser on laptop and hit the url copied earlier (starting with 127.0.01:88xx)
+&nbsp;<details><summary>--> info</summary>The browser would open a Jupyter workspace with the ipynb notebook files<br><img width="928" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/4774fab9-52fe-4d19-bf29-68fc707b9506"></details>
+8. You are all set to run through the exercises in the ipynb notebooks.<br>
+9. Hereafter, what to do if the terminal window is closed by mistake or the SSH connection gets interrupted? <br>
+&nbsp;<details><summary>--> info</summary>You can resume your work by repeating the above 8 steps with the exception of step:4 where you have to instead run 
+   ```
+   source resume_env.sh
+   ``` 
+</details>
 
-## Help improve IDC **wip**
 
-## Common issues **wip**
+## Common issues 
 1. I was running the ipynb notebook, then the terminal exited abrupty. How do I resume my work ?<br>
 Login to the headnode >> Using srun get inside a compute node >> Navigate to the cloned repo directory >> Run 'source resume_env.sh'. As before this will print the Jupyter Notebook link >> Repeat step 5,6,7 in 'Getting started on AI workshop' section above.<br>
 2. GPU Notebook has been running for more than 10 mins, seems its stuck, what to do ?
