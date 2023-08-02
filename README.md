@@ -1,4 +1,5 @@
-<p align="center"><img width="749"  src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/cfd8c105-3ebf-4614-82e4-5fcbd130dc2f"></p>
+<p align="center"><img width="582" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/f1219383-6843-4c51-813a-d3d0b1fea809">
+</p>
 
 ## Welcome
 Thank you for choosing to attend the AI Workshop @ oneAPI Devsummit 2023. This github repository holds the necessary artifacts for participating in the handson AI workshop.
@@ -16,14 +17,14 @@ Most Linux/MacOS distros comes pre-installed with an ssh client.<br> If you are 
 3.  *You have access to the [oneAPI Discord](https://discord.gg/ycwqTP6) channel.*<br> This discord channel can help resolve your queries during and after the workshop.
 
 ## Getting started with IDC 
-<details><summary>Note : Have you already ssh'ed on to the head node? If so, you can skip this section.</summary> <img width="578" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/5899afbf-6d4a-42c0-a1e4-ede3ff330fb8"></details>
+<details><summary>Note : Have you already ssh'ed on to the head node? If so, you can skip this section.</summary> <img width="578" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/2af832b8-f7c8-4883-8333-f0b401258e8f"></details>
 
 Once registered on IDC, perform the following steps to access the IDC "Scheduled access" nodes. <br>
-1. <details><summary>Sign-in to https://cloud.intel.com .</summary> <img width="841" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/2fcf7189-d3dc-4526-b004-175e212e3ea1"></details>
-2. <details><summary>Post your ssh public-key on IDC profile.</summary> If you already have a key under $HOME/.ssh/id_rsa.pub, You could use that key itself. <br>If not, generate a key-pair using the ssh-keygen command (press Enter to accept blank defaults).<br> <img width="694" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/bfc04edd-fc16-439e-886d-487adc25e9d0"></details>
-3. <details><summary>Visit 'View Instances' tab and ensure that there are no running instances.</summary> <img width="427" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/c5f69849-865a-4a44-a97b-30e5302ed139"></details>
-4. <details><summary>Go to 'Launch Instance' tab and launch the 'Schedule Access' instance (it's the first option in the list).</summary><img width="848" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ebcc0beb-6b46-4be2-8d07-181e220689f1"></details>
-5. <details><summary>Go to 'View Instances' tab and check if the instance you created is getting listed there.</summary><img width="648" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/9d672f2c-1d81-45a9-8a0a-9b77cad0b7a3"></details>
+1. <details><summary>Sign-in to https://cloud.intel.com .</summary> <img width="847" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/1b85cbdb-1e0e-4d7e-b087-ab2713469603"></details>
+2. <details><summary>Post your ssh public-key on IDC profile.</summary> If you already have a key under $HOME/.ssh/id_rsa.pub, You could use that key itself. <br>If not, generate a key-pair using the ssh-keygen command (press Enter to accept blank defaults).<br> <img width="738" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ea42e395-27cd-42dc-8aaf-7394b8b9daaa"></details>
+3. <details><summary>Visit 'View Instances' tab and ensure that there are no running instances.</summary> <img width="484" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/0567522e-75bc-41a0-ac2d-4bfe0a5fd490"></details>
+4. <details><summary>Go to 'Launch Instance' tab and launch the 'Schedule Access' instance (it's the first option in the list).</summary><img width="848" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/1b7705ef-96b2-49fe-9c40-12f87df160a3"></details>
+5. <details><summary>Go to 'View Instances' tab and check if the instance you created is getting listed there.</summary><img width="836" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/fbfdd35b-dd8e-4ded-96b2-b2bd3334eb58"></details>
 6. &nbsp;<details><summary>Create an SSH config file.</summary>
    Create a file named 'config' at the path $HOME/.ssh/config. Copy the below contents and change username.
    ```
@@ -35,8 +36,8 @@ Once registered on IDC, perform the following steps to access the IDC "Scheduled
    StrictHostKeyChecking no
    UserKnownHostsFile=/dev/null
    ```
-   <img width="542" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/23e9f216-9a58-4659-914c-3fd21fe3b7d8"></details>
-7. <details><summary>Open command prompt and try logging in as 'ssh myidc'</summary><img width="448" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/c05228df-70dd-4e08-81ff-326819fed11f"></details>
+   <img width="596" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/41ea8530-8df9-4427-8499-d796b67c4e2d"></details>
+7. <details><summary>Open command prompt and try logging in as 'ssh myidc'</summary><img width="401" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/8cc7026e-bc83-4a3e-8c1e-32bd0939f24c"></details>
 Note: The above steps assumes that your laptop is connected to an open Internet and it is **NOT** behind a corporate VPN/proxy. Additional steps as highlighted in this [guide](https://github.com/bjodom/idc#ssh-config-client-setup-assumes-no-proxy-needed) might be needed to get it working behind a proxy.
 
 ## Getting started on AI workshop 
@@ -45,35 +46,33 @@ Note: The above steps assumes that your laptop is connected to an open Internet 
    ```
    ssh myidc
    ```
-   <details><summary>--> info</summary><img width="395" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/18b69a2b-766c-488d-be0d-c0fb74d867d2"></details>
+   <details><summary>--> info</summary><img width="696" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/d8c5022f-b738-44e1-b3f9-8f1fcfc6bcdc"></details>
 2. Request for compute node. <br>
    ```
    srun -p pvc-shared --pty /bin/bash
    ```
-   <details><summary>--> info</summary><img width="433" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/a9244e0f-3281-4d37-9434-a13d8f3c6844"></details>
+   <details><summary>--> info</summary><img width="440" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/6b5bccad-b86e-4177-93f3-dabba7cdf0f9"></details>
 3. Clone this repository and change directory. <br>
    ```
    git clone https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023.git
    cd oneapi-devsummit-sea-2023
    ```
-   <details><summary>--> info</summary><img width="671" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/af7ff5a3-8c51-455a-94db-4ce241427d29"></details>
-   
-
+   <details><summary>--> info</summary><img width="644" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/509eef84-3e7e-4902-93eb-f5ce946279db"></details>
 4. Prepare environment.<br>
 Note : Below step could take 15 ~ 20 mins to complete. This step has to be executed only once.
    ```
    source prepare_env.sh
    ```
-   <details><summary>--> info</summary>If everything goes well, you should see the jupyter logs as in below image. You should see 2 links as marked in the red box<img width="708" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/f71c448b-8e23-47a0-9877-ec48ef07a677"></details>
+   <details><summary>--> info</summary>If everything goes well, you should see the jupyter logs as in below image. You should see 2 links as marked in the red box<img width="689" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/f90db395-9bd9-43e6-9535-19519421efc0"></details>
 5. Note down ip-address (starting 10.10.10.x) and port-number(starting 88xx)of the jupyter server.<br> Copy the url starting with 127.0.0.1:88xx <br>
-   <details><summary>--> info</summary>Note down the following (1) ipaddress starting 10.10.10.x (2) port number starting 88xx (3) copy to a notepad the link starting 127.0.0.1:88xx/tree?token=........<img width="678" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/34b640c0-80d4-4a3d-be3b-cacc80af61f8"></details>
+   <details><summary>--> info</summary>Note down the following (1) ipaddress starting 10.10.10.x (2) port number starting 88xx (3) copy to a notepad the link starting 127.0.0.1:88xx/tree?token=........<img width="740" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/cdf5994a-18ee-47d9-9a54-dbb0c7851840"></details>
 6. In a new terminal create an ssh tunnel to the jupyter server<br>
     ```
    ssh -L port-number:ip-address:portnumber myidc
    ```
-    <details><summary>--> info</summary>sample ssh command --> ssh -L 88xx:10.0.0.x:88xx myidc <br> include the ip-address and port number from step:5<br><img width="599" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/32f00797-ae14-4936-ba3e-87ecbdc4e183"></details>
+    <details><summary>--> info</summary>sample ssh command --> ssh -L 88xx:10.0.0.x:88xx myidc <br> include the ip-address and port number from step:5<br><img width="500" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/23a39c65-353b-4061-b42d-6fdf45bf9eb2"></details>
 7. Open browser on laptop and hit the url copied earlier (starting with 127.0.01:88xx)
-&nbsp;<details><summary>--> info</summary>The browser would open a Jupyter workspace with the ipynb notebook files<br><img width="928" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/4774fab9-52fe-4d19-bf29-68fc707b9506"></details>
+&nbsp;<details><summary>--> info</summary>The browser would open a Jupyter workspace with the ipynb notebook files<br><img width="639" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/6a4ea3b1-4ba1-45b1-8afe-443a77c2257d"></details>
 8. You are all set to run through the exercises in the ipynb notebooks.<br>
 9. Hereafter, what to do if the terminal window is closed by mistake or the SSH connection gets interrupted? <br>
 &nbsp;<details><summary>--> info</summary>You can resume your work by repeating the above 8 steps with the exception of step:4 where you have to instead run 
