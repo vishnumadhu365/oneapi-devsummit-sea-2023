@@ -86,10 +86,12 @@ Note : Below step could take 15 ~ 20 mins to complete. This step has to be execu
 ## Common issues 
 1. I was running the ipynb notebook, then the terminal exited abrupty. How do I resume my work ?<br>
 Login to the headnode >> Using srun get inside a compute node >> Navigate to the cloned repo directory >> Run 'source resume_env.sh'. As before this will print the Jupyter Notebook link >> Repeat step 5,6,7 in 'Getting started on AI workshop' section above.<br>
-2. GPU Notebook has been running for more than 10 mins, seems its stuck, what to do ?
+2. GPU Notebook has been running for more than 10 mins, seems its stuck, what to do ?<br>
 The issue could probably be due to overutilization of the GPU. You could try the following, within the GPU notebook navigate to Kernel >> Restart and Clear All Output >> Manually run the cells from the top and this time choose a different GPU device based on GPU frequency table (go for the one with the lowest frequency).
-3. Facing random errors ?
+3. Facing random errors ?<br>
 Try after restarting the Jupyter Kernel. Also, note that the notebook is designed to be executed top-to-bottom without skipping any cells. <br>If nothing works, feel free to reach out to the presenters onsite or post the issue on Discord for assistance.
+4. Srun job is hung waiting in the queue.<br>
+There is a limit of one running job per user. Check the queue to see if there are any orphaned jobs under your userid. Delete the job with scancel command and try srun again
 
 
 <details>
