@@ -24,7 +24,13 @@ Once registered on IDC, perform the following steps to access the IDC "Scheduled
 3. <details><summary>Visit 'View Instances' tab and ensure that there are no running instances.</summary> <img width="427" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/c5f69849-865a-4a44-a97b-30e5302ed139"></details>
 4. <details><summary>Go to 'Launch Instance' tab and launch the 'Schedule Access' instance (it's the first option in the list).</summary><img width="848" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ebcc0beb-6b46-4be2-8d07-181e220689f1"></details>
 5. <details><summary>Go to 'View Instances' tab and check if the instance you created is getting listed there.</summary><img width="648" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/9d672f2c-1d81-45a9-8a0a-9b77cad0b7a3"></details>
-6. <details><summary>On the Command Prompt, run the ssh command that was copied earlier.</summary><img width="421" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/292fe8e6-9d54-4996-a128-77771d4b27fe"></details>
+6. <details>
+   <summary>Create an SSH config file.</summary>
+   Create a file named 'config' at the path home. Copy the below contents and edit to suit your details.
+   ```
+   test code
+   ```
+</details>
 Note: The above steps assumes that your laptop is connected to an open Internet and it is **NOT** behind a corporate VPN/proxy. Additional steps as highlighted in this [guide](https://github.com/bjodom/idc#ssh-config-client-setup-assumes-no-proxy-needed) might be needed to get it working behind a proxy.
 
 ## Getting started on AI workshop **wip**
@@ -35,18 +41,21 @@ Note: For the below command, replace 'username' with your actual username <br>
    ssh username@idcbetabatch.eglb.intel.com
    ```
    <details><summary>--> info</summary><img width="709" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ee7d737a-d73d-422b-8803-2c4fab81382b"></details>
-2. Request for compute node <br>
+2. Request for compute node. <br>
    ```
    srun -p pvc-shared --pty /bin/bash
    ```
-   ==include success screenshot==
-3. Clone this repository and change directory <br>
+   <details><summary>--> info</summary><img width="433" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/a9244e0f-3281-4d37-9434-a13d8f3c6844"></details>
+3. Clone this repository and change directory. <br>
    ```
    git clone https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023.git
    cd oneapi-devsummit-sea-2023
    ```
-   ==include success screenshot==
-4. Prepare environment
+   <details><summary>--> info</summary><img width="671" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/af7ff5a3-8c51-455a-94db-4ce241427d29"></details>
+   
+
+4. Prepare environment.<br>
+Note : Below step could take 15 ~ 20 mins to complete.
    ```
    source prepare_env.sh
    ```
