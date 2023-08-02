@@ -9,11 +9,17 @@ Most Linux distros comes pre-installed with an ssh client.<br> If you are on Mic
 3.  *You have access to the [oneAPI Discord](https://discord.gg/ycwqTP6) channel.*<br> This discord channel can help resolve your queries during and after the workshop.
 
 ## Getting started with IDC **wip**
-<list the basic steps getting started with screen grabs .. login to IDC, verify there are no running instances, post certificate on profile, launch instance on schedule access, verify access using command ssh user@idcbetabatch.eglb.intel.com>
-Once registered on IDC follow the following steps to access the IDC "Scheduled access" nodes.<br>
-1. Sign-in to [cloud.intel.com](https://cloud.intel.com)<details><summary>More info</summary> </details>
-2. <img width="841" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/2fcf7189-d3dc-4526-b004-175e212e3ea1">
+<details><summary>Note : Have you already ssh'ed on to the head node? If so, you can skip this section</summary> <img width="578" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/5899afbf-6d4a-42c0-a1e4-ede3ff330fb8">
+</details>
 
+Once registered on IDC follow the following steps to access the IDC "Scheduled access" nodes. <br>
+1. <details><summary>Sign-in to https://cloud.intel.com</summary> <img width="841" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/2fcf7189-d3dc-4526-b004-175e212e3ea1"></details>
+2. <details><summary>Post your ssh public-key on IDC profile</summary> If you already have a key under $HOME/.ssh/id_rsa.pub, You could use that key itself. <br>If not, generate a key-pair using the ssh-keygen command (press Enter to accept blank defaults)<br> <img width="705" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/7340e004-2c34-4f33-b002-b5e7821be28a"></details>
+3. <details><summary>Visit 'View Instances' tab and ensure that there are no running instances'</summary> <img width="427" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/c5f69849-865a-4a44-a97b-30e5302ed139"></details>
+4. <details><summary>Go to 'Launch Instance' tab and launch the 'Schedule Access' instance (it's the first option in the list)</summary><img width="848" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/ebcc0beb-6b46-4be2-8d07-181e220689f1"></details>
+5. <details><summary>Go to 'View Instances' tab and check if the instance you created is getting listed there</summary><img width="648" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/9d672f2c-1d81-45a9-8a0a-9b77cad0b7a3"></details>
+6. <details><summary>On the Command Prompt, run the ssh command that was copied earlier'</summary><img width="421" alt="image" src="https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023/assets/33803027/292fe8e6-9d54-4996-a128-77771d4b27fe"></details>
+Note: The above steps assumes that your laptop is connected to an open Internet and it is **NOT** behind a corporate VPN/proxy
 
 ## Getting started on AI workshop **wip**
 <clone repo, run prepare_env.sh, note jupyter ip:port, open tunnel, access in local browser, rest of the instructions are on the ipynb notebook>
