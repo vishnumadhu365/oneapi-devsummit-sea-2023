@@ -22,7 +22,7 @@ export PROMPT_DIRTRIM=2
 
 # Friendly Aliases
 alias get_ip="echo $(ip a | grep -v -e "127.0.0.1" -e "inet6" | grep "inet" | awk {'print($2)}' | sed 's/\/.*//')"
-alias activate_oneapi="source /opt/intel/oneapi/setvars.sh"
+alias activate_oneapi="source /opt/intel/oneapi/setvars.sh --force"
 
 
 #Resume Jupyter
