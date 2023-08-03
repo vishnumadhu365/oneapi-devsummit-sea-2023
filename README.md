@@ -89,8 +89,11 @@ Login to the headnode >> Using srun get inside a compute node >> Navigate to the
 The issue could probably be due to overutilization of the GPU. You could try the following, within the GPU notebook navigate to Kernel >> Restart and Clear All Output >> Manually run the cells from the top and this time choose a different GPU device based on GPU frequency table (go for the one with the lowest frequency).
 3. Facing random errors ?<br>
 Try after restarting the Jupyter Kernel. Also, note that the notebook is designed to be executed top-to-bottom without skipping any cells. <br>If nothing works, feel free to reach out to the presenters onsite or post the issue on Discord for assistance.
-4. Srun job is hung waiting in the queue.<br>
+4. srun job is hung waiting in the queue.<br>
 There is a limit of one running job per user. Check the queue to see if there are any orphaned jobs under your userid. Delete the job with scancel command and try srun again
+5. Running sycl-ls doesnt list any GPU's. <br>
+GPU's are available only on the compute nodes and not in the Head node. Check the bash prompt and verify whether you are on the compute node.
+
 
 
 <details>
