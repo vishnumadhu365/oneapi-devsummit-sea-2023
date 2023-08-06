@@ -41,7 +41,7 @@ Once registered on IDC, perform the following steps to access the IDC "Scheduled
 Note: The above steps assumes that your laptop is connected to an open Internet and it is **NOT** behind a corporate VPN/proxy. Additional steps as highlighted in this [guide](https://github.com/bjodom/idc#ssh-config-client-setup-assumes-no-proxy-needed) might be needed to get it working behind a proxy.
 
 ## Getting started on AI workshop 
-<clone repo, run prepare_env.sh, note jupyter ip:port, open tunnel, access in local browser, rest of the instructions are on the ipynb notebook>
+Run the below steps (1 through 7) to get started with the handson workshop on IDC. <br>
 1. SSH into idc head node. <br>
    ```
    ssh myidc
