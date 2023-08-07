@@ -2,7 +2,7 @@
 </p>
 
 ## Welcome
-Thank you for choosing to attend the AI Workshop @ oneAPI Devsummit 2023. This github repository holds the necessary artifacts for participating in the handson AI workshop.
+Thank you for choosing to attend the AI Workshop @ oneAPI Devsummit 2023. This github repository holds the necessary artifacts for participating in the handson AI workshop. <br>!!*Update* --> For a detailed walkthrough of this content, refer the presentation recording [here](https://youtu.be/mN_49JgjY-I)
 
 ## Objectives
 1. Get the hands-on experience on the new [Intel® Developer Cloud (Beta)](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html).
